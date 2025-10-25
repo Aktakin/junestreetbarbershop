@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import OptimizedImage from './OptimizedImage';
 import './SplashScreen.css';
 
 const SplashScreen = ({ onComplete }) => {
@@ -22,7 +23,13 @@ const SplashScreen = ({ onComplete }) => {
       <div className="splash-content">
         <div className="logo-container">
           <div className="logo-circle">
-            <img src="/images/logo.png" alt="June Street Logo" className="logo-image" />
+            <OptimizedImage 
+              src="/images/logo.png" 
+              alt="June Street Logo" 
+              className="logo-image"
+              width={120}
+              height={120}
+            />
           </div>
         </div>
       </div>

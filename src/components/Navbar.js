@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import OptimizedImage from './OptimizedImage';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -46,7 +47,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo" onClick={handleLogoClick}>
-          <img src="/images/logo.png" alt="June Street Logo" className="logo-img" />
+          <OptimizedImage 
+            src="/images/logo.png" 
+            alt="June Street Logo" 
+            className="logo-img"
+            width={40}
+            height={40}
+          />
         </div>
         
         <div className="hamburger" onClick={toggleMenu}>

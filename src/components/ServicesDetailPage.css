@@ -113,32 +113,50 @@
 
 .card-image.haircut {
   background-color: #333;
-  background-image: url('../../public/images/image2.jpg');
+  background-image: url('/images/image2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-image.beard-trim {
   background-color: #333;
-  background-image: url('../../public/images/image3.jpg');
+  background-image: url('/images/image3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-image.beard-care {
   background-color: #333;
-  background-image: url('../../public/images/image4.jpg');
+  background-image: url('/images/image4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-image.hot-shave {
   background-color: #333;
-  background-image: url('../../public/images/image5.jpg');
+  background-image: url('/images/image5.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-image.fade-style {
   background-color: #333;
-  background-image: url('../../public/images/image6.jpg');
+  background-image: url('/images/image6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card-image.mustache {
   background-color: #333;
-  background-image: url('../../public/images/imagex.jpg');
+  background-image: url('/images/imagex.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .image-overlay {

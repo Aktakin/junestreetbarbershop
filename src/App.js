@@ -9,6 +9,7 @@ import ServicesDetailPage from './components/ServicesDetailPage';
 import AboutPage from './components/AboutPage';
 import BookingsPage from './components/BookingsPage';
 import ContactPage from './components/ContactPage';
+import ImagePreloader from './components/ImagePreloader';
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -29,6 +30,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ImagePreloader />
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
