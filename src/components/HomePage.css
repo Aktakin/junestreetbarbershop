@@ -1,0 +1,253 @@
+.homepage {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding-top: 70px; /* Account for fixed navbar */
+}
+
+.theme-section {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.white-theme {
+  background-color: #f5f5f5;
+  background-image: url('../../public/images/image4.jpg');
+  cursor: pointer;
+}
+
+.white-theme .theme-overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.black-theme {
+  background-color: #1a1a1a;
+  background-image: url('../../public/images/image3.jpg');
+}
+
+.theme-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.black-theme .theme-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.theme-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 60px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.theme-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #268BBA;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.theme-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+.theme-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+.theme-button {
+  background: transparent;
+  border: 2px solid #268BBA;
+  color: white;
+  padding: 15px 35px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+  text-align: center;
+}
+
+.theme-button:hover {
+  background: #268BBA;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Transition Animation */
+.homepage.transitioning {
+  animation: slideToNext 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.homepage.transitioning .black-theme {
+  animation: expandSection 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.homepage.transitioning .white-theme {
+  animation: fadeOutSection 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideToNext {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes expandSection {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeOutSection {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homepage {
+    flex-direction: column;
+    padding-top: 60px; /* Account for smaller mobile navbar */
+  }
+  
+  .theme-section {
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme-content {
+    padding: 0 20px;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 40px);
+  }
+  
+  .theme-logo {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .theme-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .theme-description {
+    font-size: 1.1rem;
+    max-width: 100%;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .theme-button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .white-theme {
+    background-attachment: scroll;
+  }
+  
+  .black-theme {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage {
+    padding-top: 50px;
+  }
+  
+  .theme-content {
+    padding: 0 15px;
+    width: calc(100% - 30px);
+  }
+  
+  .theme-logo {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+  
+  .theme-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .theme-description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  
+  .theme-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+    max-width: 250px;
+  }
+}
