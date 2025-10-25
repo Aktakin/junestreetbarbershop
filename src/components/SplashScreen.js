@@ -22,7 +22,7 @@ const SplashScreen = ({ onComplete }) => {
       <div className="splash-content">
         <div className="logo-container">
           <div className="logo-circle">
-            <img src="/images/logo.png" alt="June Street Logo" className="logo-image" />
+            <img src="/images/imagex.jpg" alt="June Street Logo" className="logo-image" />
           </div>
         </div>
       </div>

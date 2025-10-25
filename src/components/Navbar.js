@@ -46,7 +46,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo" onClick={handleLogoClick}>
-          <img src="/images/logo.png" alt="June Street Logo" className="logo-img" />
+          <img src="/images/imagex.jpg" alt="June Street Logo" className="logo-img" />
         </div>
         
         <div className="hamburger" onClick={toggleMenu}>
